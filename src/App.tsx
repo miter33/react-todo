@@ -6,7 +6,6 @@ import { Theme } from "./types/theme";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { toggleTheme as toggleTodoTheme } from "./store/slices/themeSlice";
 
-
 const LIGHT_THEME_CLASS = "theme-light";
 const DARK_THEME_CLASS = "theme-dark";
 
@@ -23,7 +22,7 @@ const App = () => {
 
 	const toggleTheme = useCallback(() => {
 		const newTheme: Theme = theme === "light" ? "dark" : "light";
-		dispatch(toggleTodoTheme(newTheme))
+		dispatch(toggleTodoTheme(newTheme));
 	}, [theme]);
 
 	return (

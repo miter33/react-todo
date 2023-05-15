@@ -39,7 +39,7 @@ const Board = () => {
 
         let newState: ITodo[] = [];
 
-        if (filter !== 'all') {
+        if (filter !== "all") {
             const sourceTodoId: string = filteredTodos[source.index].id;
             const destinationTodoId: string = filteredTodos[destination.index].id;
 
@@ -57,7 +57,7 @@ const Board = () => {
 
     const removeItem = (id: string): void => {
         dispatch(removeTodo(id));
-    }
+    };
 
     return (
         <div className="board">
