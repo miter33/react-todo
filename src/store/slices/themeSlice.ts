@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Theme } from "../../types/theme";
 
-
 const DEFAULT_THEME: Theme = "dark";
 const LOCAL_STORAGE_THEME_KEY = "theme";
 
@@ -17,7 +16,7 @@ if (!initialTheme) {
 }
 
 const initialState: ThemeState = {
-    theme: initialTheme
+    theme: initialTheme,
 };
 
 const themeSlice = createSlice({
@@ -27,7 +26,7 @@ const themeSlice = createSlice({
         toggleTheme(state: ThemeState, action: PayloadAction<Theme>) {
             localStorage.setItem(LOCAL_STORAGE_THEME_KEY, action.payload);
             state.theme = action.payload;
-        }
+        },
     },
 });
 

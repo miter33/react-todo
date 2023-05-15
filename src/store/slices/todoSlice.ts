@@ -18,7 +18,7 @@ if (localStorageTodos) {
 
 const initialState: TodoState = {
     data: initialTodos,
-    filterBy: "all"
+    filterBy: "all",
 };
 
 const todoSlice = createSlice({
@@ -35,7 +35,7 @@ const todoSlice = createSlice({
 
         toggleTodo(state: TodoState, action: PayloadAction<string>) {
             const toggleTodoItem: ITodo | undefined = state.data.find(
-                (todo) => todo.id === action.payload
+                (todo) => todo.id === action.payload,
             );
 
             if (toggleTodoItem) {
@@ -61,5 +61,6 @@ const todoSlice = createSlice({
     },
 });
 
-export const { addTodo, toggleTodo, filterBy, clearCompletedTodos, removeTodo, updateTodos } = todoSlice.actions;
+export const { addTodo, toggleTodo, filterBy, clearCompletedTodos, removeTodo, updateTodos } =
+    todoSlice.actions;
 export default todoSlice.reducer;

@@ -1,17 +1,17 @@
 @import "./../../styles/variables";
 
 .input-container {
-  display: grid;
-  padding: 16px;
-  background-color: var(--board-bg-color);
-  border-radius: $border-radius;
+    display: grid;
+    padding: 16px;
+    background-color: var(--board-bg-color);
+    border-radius: $border-radius;
 }
 
 .input {
-  background-color: transparent;
-  background-repeat: no-repeat;
-  outline: none;
-  border: none;
-  color: var(--primary-text-color);
-  font-size: 18px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    outline: none;
+    border: none;
+    color: var(--primary-text-color);
+    font-size: 18px;
 }

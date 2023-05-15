@@ -6,19 +6,19 @@ import Label from "../../components/Label";
 import "./styles.scss";
 
 const Home = () => {
-	const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch();
 
-	const addNewTodo = (todoTitle: string): void => {
-		dispatch(addTodo(todoTitle));
-	};
+    const addNewTodo = (todoTitle: string): void => {
+        dispatch(addTodo(todoTitle));
+    };
 
-	return (
-		<>
-			<Input placeholder="Add a new task" setData={addNewTodo} />
-			<Board />
+    return (
+        <>
+            <Input placeholder="Add a new task" setData={addNewTodo} />
+            <Board />
             <Label value="Drag and drop to reorder list" className="label" />
-		</>
-	);
+        </>
+    );
 };
 
 export default Home;
