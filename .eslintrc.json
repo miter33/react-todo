@@ -1,13 +1,6 @@
 {
-    "extends": [
-        "plugin:@typescript-eslint/recommended"
-    ],
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "jest",
-        "import"
-    ],
+    "extends": ["plugin:@typescript-eslint/recommended"],
+    "plugins": ["react", "@typescript-eslint", "jest", "import"],
     "env": {
         "browser": true,
         "es6": true,
