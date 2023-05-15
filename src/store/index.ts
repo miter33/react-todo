@@ -1,25 +1,15 @@
-import { Middleware, configureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import todoReducer from "./slices/todoSlice";
-import { ITodo } from "../types/todo";
-import { LOCAL_STORAGE_TODOS_NAME } from "../constants";
+import themeReducer from "./slices/themeSlice";
+import LocalStorageRepositoryMiddleware from "./middlewares/localStorageRepositoryMiddleware";
 
-const setLocalStorage = (todos: ITodo[]) => {
-	localStorage.setItem(LOCAL_STORAGE_TODOS_NAME, JSON.stringify(todos));
-};
-
-
-const localStorageRepositoryMiddleware: Middleware = ({ getState }) => (next: any) => (action: any) => {
-	const returnValue = next(action);
-	const { todo } = getState();
-	setLocalStorage(todo.data);
-	return returnValue;
-};
 
 export const store = configureStore({
 	reducer: {
 		todo: todoReducer,
+		theme: themeReducer,
 	},
-	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(localStorageRepositoryMiddleware),
+	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(LocalStorageRepositoryMiddleware),
 });
 
 export type AppDispatch = typeof store.dispatch;
