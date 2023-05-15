@@ -30,7 +30,7 @@
     &-button {
         height: 20px;
         border: none;
-        &-checkbox {
+        &-checked {
             background-color: var(--border-color);
             border-radius: 50%;
             position: relative;
@@ -52,7 +52,7 @@
         }
     }
     &-completed {
-        .todo-button-checkbox {
+        .todo-button-checked {
             background-color: #6f54d1;
             &::before {
                 content: "\2714";

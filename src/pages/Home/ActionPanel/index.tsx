@@ -9,14 +9,14 @@ import "./styles.scss";
 const ActionPanel = () => {
 	const dispatch = useAppDispatch();
 	const [filter, setFilter] = useState<TodoFilter>("all");
-	const remainingTasksCount = useAppSelector(state => activeTodosCount(state.todo));
+	const remainingTasksCount: number = useAppSelector(state => activeTodosCount(state.todo));
     
 
 	useEffect(() => {
 		dispatch(filterBy(filter));
 	}, [filter]);
 
-	const removeCompletedTodos = () => {
+	const removeCompletedTodos = (): void => {
 		dispatch(clearCompletedTodos());
 	};
 
@@ -25,7 +25,7 @@ const ActionPanel = () => {
 	};
 
 	return (
-		<div className="navigation-panel">
+		<div className="action-panel">
 			<span>{remainingTasksCount} items left</span>
 			<div>
 				<span
