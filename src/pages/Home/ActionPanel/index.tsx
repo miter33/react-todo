@@ -1,15 +1,14 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import { TodoFilter } from "../../../types/todoFilter";
-import "./styles.scss";
 import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 import { clearCompletedTodos, filterBy } from "../../../store/slices/todoSlice";
 import { activeTodosCount } from "../../../store/selectors/activeTodosCountSelector";
+import "./styles.scss";
 
 
-const ControlPanel = () => {
-	const [filter, setFilter] = useState<TodoFilter>("all");
+const ActionPanel = () => {
 	const dispatch = useAppDispatch();
+	const [filter, setFilter] = useState<TodoFilter>("all");
 	const remainingTasksCount = useAppSelector(state => activeTodosCount(state.todo));
     
 
@@ -22,11 +21,11 @@ const ControlPanel = () => {
 	};
 
 	const getCategoryClassName = (todoFilter: TodoFilter): string => {
-		return filter === todoFilter ? "category category--active" : "category";
+		return filter === todoFilter ? "category category-active" : "category";
 	};
 
 	return (
-		<div className="control-panel">
+		<div className="navigation-panel">
 			<span>{remainingTasksCount} items left</span>
 			<div>
 				<span
@@ -49,7 +48,7 @@ const ControlPanel = () => {
 				</span>
 			</div>
 			<span
-				className="clear"
+				className="clear-completed"
 				onClick={removeCompletedTodos}
 			>
                 Clear completed
@@ -58,4 +57,4 @@ const ControlPanel = () => {
 	);
 };
 
-export default ControlPanel;
+export default ActionPanel;

@@ -1,8 +1,9 @@
-import React from "react";
 import Input from "../../components/Input";
 import Board from "./Board";
 import { useAppDispatch } from "../../store/hooks";
 import { addTodo } from "../../store/slices/todoSlice";
+import Label from "../../components/Label";
+import "./styles.scss";
 
 const Home = () => {
 	const dispatch = useAppDispatch();
@@ -15,7 +16,7 @@ const Home = () => {
 		<>
 			<Input placeholder="Add a new task" setData={addNewTodo} />
 			<Board />
-            <p className="component__label">Drag and drop to reorder list</p>
+            <Label value="Drag and drop to reorder list" className="label" />
 		</>
 	);
 };

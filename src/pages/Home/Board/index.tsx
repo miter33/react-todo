@@ -1,11 +1,10 @@
-import React from "react";
 import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
-import ControlPanel from "../ControlPanel";
+import ActionPanel from "../ActionPanel";
 import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 import { removeTodo, toggleTodo, updateTodos } from "../../../store/slices/todoSlice";
 import { filterTodos } from "../../../store/selectors/filterTodosSelector";
-import "./styles.scss";
 import { ITodo } from "../../../types/todo";
+import "./styles.scss";
 
 
 const Board = () => {
@@ -50,9 +49,7 @@ const Board = () => {
         }
         
         const items = reorder(filteredTodos, sourceIndex, destinationIndex);
-        newState = [...filteredTodos];
         newState = items;
-
 
         dispatch(updateTodos(newState));
     };
@@ -105,15 +102,12 @@ const Board = () => {
                                     }
                                     {provided.placeholder}
                                 </div>
-
                             )
                         }
-
                     </Droppable>
-
                 </DragDropContext>
             </div>
-            <ControlPanel />
+            <ActionPanel />
         </div>
     );
 };
