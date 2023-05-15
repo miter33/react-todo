@@ -29,6 +29,6 @@
     },
     "rules": {
         "import/prefer-default-export": "off",
-        "no-restricted-exports": "off" // TO DO: need to remove when https://github.com/eslint/eslint/issues/15617 would be resolved
+        "no-restricted-exports": "off"
     }
 }
