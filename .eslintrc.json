@@ -29,6 +29,7 @@
     },
     "rules": {
         "import/prefer-default-export": "off",
-        "no-restricted-exports": "off"
+        "no-restricted-exports": "off",
+        "@typescript-eslint/no-explicit-any": "off"
     }
 }
