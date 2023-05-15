@@ -1,0 +1,54 @@
+$border-radius: 20px;
+
+// Colors
+$primary-color: #3a7bfd;
+
+// Background images
+$lt-background: url("../assets/background-light.png");
+$dt-background: url("../assets/background-dark.png");
+
+// Theme icons
+$lt-icon:url("../assets/icon-moon.svg");
+$dt-icon:url("../assets/icon-sun.svg");
+
+// Light theme
+$lt-color-1: #ffffff;
+$lt-color-2: #e4e5f1;
+$lt-color-3: #d2d3db;
+$lt-color-4: #9394a5;
+$lt-color-5: #484b6a;
+
+// Dark theme
+$dt-color-1: #161722;
+$dt-color-2: #25273c;
+$dt-color-3: #cacde8;
+$dt-color-4: #e4e5f1;
+$dt-color-5: #777a92;
+
+.theme-light {
+  --primary-bg-color: #{$lt-color-1};
+  --main-bg-image: #{$lt-background};
+  --theme-icon: #{$lt-icon};
+  --primary-text-color: #{$lt-color-5};
+  --secondary-text-color: #{$lt-color-4};
+  --board-bg-color: #{$lt-color-1};
+  --border-color: #{$lt-color-2};
+  --box-shadow-color: #{$lt-color-3};
+  --text-hover-color: #{$dt-color-1};
+  --checkbox-bg-color: #{$lt-color-1};
+  --scroll-thumb-color: #{$lt-color-3};
+}
+
+.theme-dark {
+  --primary-bg-color: #{$dt-color-1};
+  --main-bg-image: #{$dt-background};
+  --theme-icon: #{$dt-icon};
+  --primary-text-color: #{$dt-color-3};
+  --secondary-text-color: #{$lt-color-4};
+  --board-bg-color: #{$dt-color-2};
+  --border-color: #{$dt-color-5};
+  --box-shadow-color: #{$dt-color-1};
+  --checkbox-bg-color: #{$dt-color-2};
+  --text-hover-color: #{$lt-color-1};
+  --scroll-thumb-color: #{$lt-color-3};
+}

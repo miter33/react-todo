@@ -1,0 +1,30 @@
+@import "./../../../styles/variables";
+
+.control-panel {
+    color: var(--secondary-text-color);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+.category {
+    margin: 10px;
+    font-weight: bold;
+    color: var(--secondary-text-color);
+    &:hover {
+        cursor: pointer;
+        color: var(--text-hover-color);
+    }
+    &--active {
+        color: $primary-color;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.clear:hover {
+    cursor: pointer;
+    color: var(--text-hover-color);
+}

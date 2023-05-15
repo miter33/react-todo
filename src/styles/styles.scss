@@ -1,0 +1,45 @@
+.container-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 60px 30px 0;
+  font-size: 16px;
+}
+
+.component__label {
+  text-align: center;
+  color: var(--secondary-text-color);
+  margin-top: 30px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: cursive;
+  background-color: var(--primary-bg-color);
+  &::before {
+    background-image: var(--main-bg-image);
+    background-size: 100%;
+    width: 100%;
+    content: "";
+    height: 240px;
+    position: absolute;
+    z-index: -10;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: var(--border-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-color);
+}
+
+button,
+input {
+  font-family: cursive;
+  font-size: 16px;
+}
