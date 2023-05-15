@@ -10,7 +10,7 @@
     "prepare": "husky install",
     "lintnpm": "echo 'Running lintnpm script'",
     "lint:fix": "npm lint --fix",
-    "lint": "npx nx run-many --target=lint"
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
