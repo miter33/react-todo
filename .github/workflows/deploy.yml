@@ -36,7 +36,7 @@ jobs:
               with:
                   node-version: 18.x
             - name: install dependencies
-              run: npm ci
+              run: npm i --legacy-peer-deps
             - name: build app
               run: npm run build
             - name: Copy index.html to 404.html
