@@ -1,7 +1,8 @@
 {
+  "homepage": "https://miter33.github.io/react-todo/",
   "name": "react_todo",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
